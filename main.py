@@ -1,5 +1,20 @@
+# import only system from os 
+from os import system, name
+from time import sleep 
+
 #python challenge 1
 print (2 ** 38) # 2 to the power of 38
+
+# define our clear function 
+def clear(): 
+  
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
+  
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear') 
 
 #python challenge 2
 # Letter substiution to crack encoded message 9 Nov 19
@@ -32,3 +47,7 @@ str = "g fmnc wms bgbl'r rpylqjyrc gr zw fylb. rfyr'q ufyr amknsrcpq ypc dmp. bm
 
 #str = "http://www.pythonchallenge.com/pc/def/map.html"
 print (str.translate(trantab))
+
+# sleep for 2 seconds after printing output then clear the screen
+sleep(5) 
+clear()
